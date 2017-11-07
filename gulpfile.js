@@ -33,7 +33,7 @@ gulp.task('scripts', function() {
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/bootstrap/dist/js/bootstrap.js'
         ])
-        .pipe(concat('libs.min.js'))
+        // .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('app/js'));
 });
@@ -48,7 +48,7 @@ gulp.task('css-libs', ['sass'], function() {
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
     gulp.watch('app/sass/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
+    // gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('glyphicon-bootstrap', function() {

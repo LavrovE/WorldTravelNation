@@ -73,7 +73,7 @@ $('document').ready(function(){
             $('#modal-edit__new_title').html(title);
             $('#modal-edit__new_description').html('');
             $('#modal-edit__new_description').html(description);
-
+            $('.for_close').hide();
         
         // $("#modal-album-new").hide();
         $("#modal-album-album").show();
