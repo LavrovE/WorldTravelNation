@@ -1172,7 +1172,7 @@ padding-left: 10px;
     			border:none;
     			float:right;
     			margin-top: 25px;
-    			width: 120px;
+    			//width: 120px;
 				-webkit-border-radius: 0px;
 				-moz-border-radius: 0px;
 				border-radius: 0px;
@@ -1255,7 +1255,7 @@ padding-left: 10px;
     		border:none;
 			border-radius: 0px;
     		margin-top: 20px;
-    		width: 120px;
+    		//width: 120px;
 			&_tags {
 				display: inline-block;
 				margin-top: 0px;
@@ -3241,7 +3241,7 @@ background: $main-color;
 				border:none;
 				float:right;
 				margin-top: 25px;
-				width: 120px;
+				//width: 120px;
 			}
 		}
 	}
@@ -3321,7 +3321,7 @@ background: $main-color;
 			border:none;
 			margin-top: 20px;
 			padding: 0px 14px;
-			width: 120px;
+			//width: 120px;
 			&_tags {
 				display: inline-block;
 				margin-top: 0px;
@@ -3417,8 +3417,222 @@ background: $main-color;
 			}
 		}
 	}
+	&-forum{
+
+	}
+}
+.noflat{
+	float: none;
+}
+.mb-0{
+	margin-bottom: 0px;
+}
+.upforum{
+	&__wrapper{
+		padding-left: 40px;
+		padding-top: 40px;
+		padding-bottom: 50px;
+		padding-right: 32px;
+	}
+	&__person{
+
+	}
+	&__img{
+		margin-left: 18px;
+	}
+	&__name{
+		font-size: 18px;
+		font-family: $MonMedium;
+		color: $main-color;
+		margin-left: 25px;
+	}
+	&__position{
+		font-size: 18px;
+		font-family: $MonMedium;
+		color: $red-color;
+	}
+	*{
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+	}
+	&__left{
+		float: left;
+	}
+	&__right{
+		float: right;
+	}
+
+}
+.h1{
+	font-family:$MonBold;
+	color: $main-color;
+	font-size: 36px;
+}
+.forum__tags{
+	display: block;
+	margin: 20px 0px;
+	.forum__tag{
+		background-color: $blue-color;
+		color: $white-color;
+		padding: 5px;
+		margin-right: 12px;
+		font-family: $MonMedium;
+	}
+
+}
+.upforum__wrapper .section-form__btn_center.mt-0 {
+	margin-left: 140px;
+}
+.forum__main{
+	margin-top: 35px;
+	margin-bottom: 30px;
+	&__text{
+		font-size: 14px;
+		font-family: $MonRegular;
+		color: $main-color;
+	}
+	.section__names_margin{
+		margin: 0px;
+	}
+	.section__avatars_margin{
+		margin: 0px;
+		margin-right: 4px;
+	}
+	&__replies{
+		font-family: MonsterMedium;
+		font-size: 24px;
+		color: $main-color;
+		display: block;
+		margin-bottom: 0px;
+	}
+}
+.replies__status__right {
+	float: right;
+}
+.replies__status__left {
+	float: left;
+}
+.replies__status {
+	max-width: 162px;
+	display: block;
+	margin: 20px 0px 20px;
+}
+.replies__count{
+	color: $main-color;
+	font-size: 14px;
+	font-family: MonsterRegular;
+}
+span.replies__rating {
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+.replies_reply {
+	margin-right: 10px;
+	text-decoration: none;
 }
 
+form.section-blog__form.centr {
+	margin: 0px;
+	padding-left: 140px;
+}
+.mt-0{
+	margin-top: 0px;
+}
+
+.upforum__footer{
+	&__social{
+		position: absolute;
+		right: 0px;
+	}
+}
+a.replies_reply {
+	margin-right: 10px;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "MonsterRegular";
+	color: #002d40;
+}
+button.section-form__btn.float_right {
+	margin: 0px;
+}
+button.section-form__btn.float_right {
+	margin: 0px;
+}
+.float-right{
+	float:right;
+
+}
+.float-left{
+	float:lefts;
+
+}
+button.section-form__btn.float-right {
+	margin: 0px;
+}
+.other__questions__question img {
+	margin-left: 40px;
+}
+#modal-reply textarea {
+	width: 100%;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+.report__text__h1{
+font-family: MonsterMedium;
+	font-size: 24px;
+	color: $main-color;
+
+
+}
+.report__text__text{
+	font-family: MonsterMedium;
+	font-size: 16px;
+	color: $main-color;
+}
+img.small-img {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+#modal-reply textarea {
+	width: 100%;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+.reply__share__radio{
+
+}
+.radio_label{
+	padding-left:4px;
+	font-family: "MonsterMedium";
+	font-size: 14px;
+	margin-top: 10px;
+}
+.other__questions__question{
+	display: block;
+	margin-bottom: 20px;
+}
+.replies__post {
+	border-bottom: 1px solid #d6d6d6;
+	margin-bottom: 30px;
+}
+.other__querstions__h1{
+	font-family: MonsterMedium;
+	font-size: 24px;
+	color: $main-color;
+}
+.other__questions__question{
+	font-family: MonsterBold;
+	font-size: 14px;
+	color: $main-color;
+}
+.upforum__footer {
+	margin: 40px 0px 0px;
+}
 .inbox {
 	&_width {
 		width:41%;

@@ -97,9 +97,17 @@ $('document').ready(function(){
         $('.locked .album__name').prepend( '<img src="img/lock.png" alt="" class="album__lock">' )
     }
 
+    $('.reply_btn').on('click', function(){
+        $("#modal-reply").show();
+    });
 
+    $('.upforum__img').on('click', function(){
+        $("#modal-reply__report").show();
+    });
 
-
+    $('.repost_forum').on('click', function(){
+        $("#modal-reply__share").show();
+    });
 
     $('#create_albums').click(function(){
     if ( $('#modal-edit__title').val() === "" ) {  
