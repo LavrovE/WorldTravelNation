@@ -2,6 +2,48 @@ $('document').ready(function(){
     $('.opening').on('click', function(){
         $('.for_close').hide();
     });
+
+
+    function burger(action, windowAction){
+        action.click(function(){
+            if(windowAction.css('display') == 'none') {
+                windowAction.slideDown(300);
+            }
+            else {
+                windowAction.slideUp(300);
+            }
+        });
+    }
+    function optionBurger(){
+        let clickOpen = $('.burgerButton');
+        clickOpen.css('cursor', 'pointer');
+        let burgerShow = $('.burgerShow').css('display', 'none');
+        burger(clickOpen, burgerShow);
+    }
+
+    function showNewsBlock(where) {
+        let buttonOpenMenu = $('.openPreNews');
+        var s = where.find(buttonOpenMenu);
+        if(buttonOpenMenu.css('overflow') == 'hidden'){
+            buttonOpenMenu.css('overflow', 'unset');
+            buttonOpenMenu.css('height', 'auto');
+            where.find($('.icon-arrow-forum')).css('transform', 'rotate(-90deg)');
+            buttonOpenMenu.show(300);
+        }
+        else {
+            buttonOpenMenu.css('height', '45px');
+            buttonOpenMenu.css('overflow', 'hidden');
+            where.find($('.icon-arrow-forum')).css('transform', 'rotate(90deg)');
+        }
+    }
+    var click_ShowNewsBlock = $('.actionbutton-showmenu')
+    click_ShowNewsBlock.click(function(){
+        showNewsBlock($('.wrapper-newsfeed'));
+    });
+
+    if (optionBurger() !== undefined)
+        optionBurger().click(burger());
+
     $('#message').click(function(){
         $(".header__box").toggle();
         $(".close-wrap").toggle();
@@ -65,28 +107,28 @@ $('document').ready(function(){
         $('#album__description__error').html("Add a description");       
     }
     else{
-            var myData = [];
-            var title = $('#modal-edit__title').val();
-            var description = $('#modal-edit__description').val();
-            myData.push(title,description);
-            $('#modal-edit__new_title').html('');
-            $('#modal-edit__new_title').html(title);
-            $('#modal-edit__new_description').html('');
-            $('#modal-edit__new_description').html(description);
-            $('.for_close').hide();
-        
-        // $("#modal-album-new").hide();
+        var myData = [];
+        var title = $('#modal-edit__title').val();
+        var description = $('#modal-edit__description').val();
+        myData.push(title,description);
+        $('#modal-edit__new_title').html('');
+        $('#modal-edit__new_title').html(title);
+        $('#modal-edit__new_description').html('');
+        $('#modal-edit__new_description').html(description);
+
+
+        $("#modal-album-new").hide();
         $("#modal-album-album").show();
     }
 
          
        
-    }); 
+    });
     $('#edit_album').click(function(){
-        // $("#modal-album-album").hide();
+        $("#modal-album-album").hide();
         $("#modal-album-manage_album").show();
-       
-    }); 
+
+    });
 
     $('#add_album').click(function(){
         $("#modal-album-albums").show();
