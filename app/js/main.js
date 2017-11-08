@@ -40,6 +40,47 @@ $('document').ready(function(){
     click_ShowNewsBlock.click(function(){
         showNewsBlock($('.wrapper-newsfeed'));
     });
+    function dropdownElement(whereOpen, whatClick) {
+        whereOpen.find($('.dropdownBlock'));
+        whatClick.click(function(){
+            if(whereOpen.css('display') == 'none') {
+                whereOpen.slideDown(500);
+            }
+            else {
+                whereOpen.slideUp(500);
+            }
+        });
+    }
+    // LANDING PAGE
+    dropdownElement($('#wrapper-offer-block'), $('.OpenDropdownBlock'));
+    dropdownElement($('#wrapper-form'), $('.OpenDropdownForm'));
+
+    dropdownElement($('.dropdownBlock'), $('.OpenDropdownBlock'));
+    // END | dropdownElement
+
+    // FADE EFFECT
+    function fadeEffect(whereOpen, whatClick) {
+        whereOpen.find($('.fadeEffect'));
+        whatClick.click(function(){
+            if(whereOpen.css('display') == 'none') {
+                whereOpen.fadeIn(1000);
+            }
+            else {
+                whereOpen.fadeOut(1000);
+            }
+        });
+    }
+    fadeEffect($('#wrapper-thanck'), $('.activeFadeThanks'));
+    // END | fadeEffect
+
+    function anchorSlideTo(whereClick, whereTo) {
+        whereClick.find($('a[href^="#anchorSlideToButton"]'));
+        whereClick.click(function(){
+            $('html, body').animate({scrollTop: $('.anchorSlideHere').offset().top - 50}, 1000);
+        });
+    }
+    anchorSlideTo($('.fliper-card'), $('#wrapper-offer-block'));
+    // anchorSlideTo($('#wrapper-offer-block'), $('#wrapper-form'));
 
     if (optionBurger() !== undefined)
         optionBurger().click(burger());
@@ -440,7 +481,7 @@ if ($("form").is("#my-dropzone-container")) {
             $( ".js-open-cropper-modal" ).trigger( "click" );
             uploadbool = false;
             }
-            $(".dz-default").css("display","none");
+            // $(".dz-default").css("display","none");
             if(radiusbool == false) {
                 $(".dz-image img").removeClass("dz-img-radius");
                 radiusbool == true;
@@ -469,7 +510,7 @@ var myDropzonePhoto = new Dropzone("#my-dropzone-container_photo", {
             $( ".js-open-cropper-modal" ).trigger( "click" );
             uploadbool = false;
             }
-            $(".dz-default").css("display","none");
+            // $(".dz-default").css("display","none");
             if(radiusbool == false) {
                 $(".dz-image img").removeClass("dz-img-radius");
                 radiusbool == true;
@@ -503,7 +544,7 @@ var myDropzoneAddPhoto = new Dropzone("#my-dropzone-container_upload", {
             $( ".js-open-cropper-modal" ).trigger( "click" );
             uploadbool = false;
             }
-            $(".dz-default").css("display","none");
+            // $(".dz-default").css("display","none");
             if(radiusbool == false) {
                 $(".dz-image img").removeClass("dz-img-radius");
                 radiusbool == true;
@@ -539,7 +580,7 @@ var myDropzoneAddPhoto2 = new Dropzone("#my-dropzone-container_upload2", {
             $( ".js-open-cropper-modal" ).trigger( "click" );
             uploadbool = false;
             }
-            $(".dz-default").css("display","none");
+            // $(".dz-default").css("display","none");
             if(radiusbool == false) {
                 $(".dz-image img").removeClass("dz-img-radius");
                 radiusbool == true;
@@ -575,7 +616,7 @@ var myDropzoneLogo = new Dropzone("#my-dropzone-container_logo", {
             $( ".js-open-cropper-modal" ).trigger( "click" );
             uploadbool = false;
             }
-            $(".dz-default").css("display","none");
+            // $(".dz-default").css("display","none");
             if(radiusbool == false) {
                 $(".dz-image img").removeClass("dz-img-radius");
                 radiusbool == true;
@@ -607,7 +648,7 @@ var myDropzoneNewImg = new Dropzone("#my-dropzone-container_newimg", {
             $( ".js-open-cropper-modal" ).trigger( "click" );
             uploadbool = false;
             }
-            $(".dz-default").css("display","none");
+            // $(".dz-default").css("display","none");
             if(radiusbool == false) {
                 $(".dz-image img").removeClass("dz-img-radius");
                 radiusbool == true;
