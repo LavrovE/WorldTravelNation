@@ -1,6 +1,215 @@
 .js-open-cropper-modal{
 	display: none;
 }
+//registration
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1.5em;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+	font-weight: 100;
+	//text-align: center;
+}
+
+.registration__form__wrapper {
+	background: #eefdff;
+	color: #ffffff;
+	display: inline-block;
+	padding: 70px 100px;
+	margin: 6em auto;
+	.navigation__form_wrapper {
+		text-align: left;
+		ol {
+			list-style: none;
+			background: #eefdff;
+			position: absolute;
+			padding: 30px 0;
+			width: 700px;
+			z-index: 100;
+			li {
+				display: inline-block;
+				margin-right: 27px;
+				font-size: 18px;
+				max-width: 20%;
+				text-align: left;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				a {
+					color: $main-color;
+					text-decoration: none;
+					position: relative;
+					z-index: 2;
+					cursor: pointer;
+					opacity: 0;
+					&.done {
+						opacity: 1;
+					}
+				}
+			}
+			margin-bottom: 30px;
+		}
+	}
+	.sign-form {
+		width: 800px;
+		text-align: left;
+		margin: 85px 0 0 0;
+		#next-page {
+			opacity: 0;
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 20px;
+			background: url("https://jdniki.github.io/signup/images/next-pagehover.svg");
+			background-size: contain;
+			//border: 1px solid red;
+			//border-radius: 150px;
+			&:hover {
+				//background: url("https://jdniki.github.io/signup/images/next-pagehover.svg");
+				background-size: contain;
+			}
+		}
+		.questions {
+			list-style: none;
+			-webkit-transition: height 0.4s;
+			transition: height 0.4s;
+			width: 88%;
+			display: inline-block;
+			height: 80px;
+			li {
+				position: absolute;
+				width: 700px;
+				color: $main-color;
+				a{
+					color: $main-color !important;
+				}
+				span {
+					display: block;
+
+					margin-bottom: 10px;
+					font-size: 30px;
+					font-family: "MonsterBold";
+					color: $main-color;
+					text-align: center;
+					width: 100%;
+					text-transform: uppercase;
+				}
+				input {
+					width: 100%;
+					font-size: 24px;
+					color: $main-color;
+					margin: 0.3em 0 1em 0;
+					border: none;
+					background: none;
+					border-bottom: 3px solid #bfd8db;
+					padding: 0.5em 0.1em;
+					transition: all 0.5s ease;
+					&:focus {
+						outline: none;
+						border-bottom: 3px solid #bfd8db;
+					}
+				}
+				&:not(:first-child) {
+					opacity: 0;
+					margin-top: 150px;
+				}
+				/*-------------Password ------------------*/
+				#viewpswd {
+					position: absolute;
+					opacity: 0;
+					//                    z-index:-100;
+				}
+				#show-pwd {
+					margin: -2.75em 0em;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					right: 0;
+					color: $main-color;
+					cursor: pointer;
+					&.view {
+						background: url("../img/hide.svg");
+						color: red;
+						background-size: contain;
+					}
+					&.hide {
+						background: url("https://jdniki.github.io/signup/images/hide.svg");
+						background-size: contain;
+						color: red;
+					}
+				}
+				#show-pwd:active,
+				#show-pwd:focus {
+					background: url("https://jdniki.github.io/signup/images/hide.svg");
+					background-size: contain;
+				}
+				select.country {
+					position: absolute;
+					width: 4.5em;
+					font-size: 0.7em;
+					color: #0c2e40;
+					height: 70px;
+					background: transparent;
+					border: 1px solid #ccc;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					border: none;
+				}
+				#phone {
+					padding-left: 5em;
+				}
+			}
+		}
+	}
+	.error-message {
+		color: rgba(207, 0, 0, 0.56);
+		font-size: 14px;
+		margin-top: 20px;
+		padding-bottom: 30px;
+		background: #eefdff;
+	}
+}
+#wf{
+color: $main-color;
+	font-size:40px;
+}
+
+@-webkit-keyframes moveUpFromDown {
+	from {
+		-webkit-transform: translateY(100%);
+	}
+	to {
+		-webkit-transform: translateY(0);
+	}
+}
+
+@keyframes moveUpFromDown {
+	from {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+	}
+	to {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+h2.title-text {
+	font-size: 26px;
+	min-height: 40px;
+	line-height: 40px;
+}
+//registration end
 .header {
 	box-shadow:1px 0px 10px rgba(0,0,0, .1);
 	&__wrap {
@@ -4956,13 +5165,24 @@ select.modal-edit__select-post {
 	color: #002d40;
 	text-decoration: none;
 }
+.forum-menu span.pull-right {
+	display: none;
+}
 /*FORUM MENU*/
 .forum-menu .menu .menu-nav .menu-nav__title {
 	text-align: center;
 	font-size: 16px;
 	text-transform: uppercase;
+	//border-bottom: solid 1px #ccc;
+	//padding-bottom: 14px;
+}
+.border__bottom{
 	border-bottom: solid 1px #ccc;
-	padding-bottom: 14px
+	padding-bottom: 14px;
+	margin-bottom: 14px;
+}
+#media__search__btn{
+	cursor: pointer;
 }
 .forum-menu .section-form__btn {
 	padding: 0 5px;
@@ -5107,6 +5327,7 @@ select.modal-edit__select-post {
 	background: #00e8ff;
 	position: absolute;
 	padding: 10px 63px;
+	font-family: "MonsterRegular";
 	transform: rotate(35deg);
 	right: -88px;
 	top: 3px;
@@ -5224,7 +5445,7 @@ select.modal-edit__select-post {
 	margin: 0;
 }
 .offer-block .block-title {
-	padding: 40px 33px;
+	padding: 40px 10px;
 	font-family: "MonsterBold";
 	background-color: #ccc;
 	color: #fff;
@@ -5233,7 +5454,7 @@ select.modal-edit__select-post {
 }
 .offer-block .wrapper-element {
 	background-color: #eefdff;
-	padding: 18px 30px;
+	padding: 18px 20px;
 	font-weight: bold;
 	overflow: hidden;
 }
@@ -5269,7 +5490,7 @@ select.modal-edit__select-post {
 }
 .offer-block .block-head .block-actions {
 	margin-top: 35px;
-	font-size: 17px;
+	font-size: 16px;
 }
 .offer-block .block-head .block-actions span {
 	font-family: "MonsterBold";
@@ -5475,6 +5696,25 @@ select.modal-edit__select-post {
 }
 .wrapper-newsfeed-b .item-content .right-content {
 	float: right;
+	margin-left: 15px;
+	margin-right: 100px;
+	padding: 20px 0;
+
+} 
+html{
+	background-color: #f7f7f7;
+}
+.no__margin {
+	margin: 0px;
+}
+.ml-10{
+	margin-left: 10px;
+}
+#media__search{
+	//display: none;
+}
+.section-blog .item-content .right-content * {
+	line-height: 18px;
 }
 /*LANDING HEADER*/
 #landing-aside .forum-menu .menu {

@@ -119,6 +119,235 @@
   display: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+  font-weight: 100;
+}
+
+.registration__form__wrapper {
+  background: #eefdff;
+  color: #ffffff;
+  display: inline-block;
+  padding: 70px 100px;
+  margin: 6em auto;
+}
+
+.registration__form__wrapper .navigation__form_wrapper {
+  text-align: left;
+}
+
+.registration__form__wrapper .navigation__form_wrapper ol {
+  list-style: none;
+  background: #eefdff;
+  position: absolute;
+  padding: 30px 0;
+  width: 700px;
+  z-index: 100;
+  margin-bottom: 30px;
+}
+
+.registration__form__wrapper .navigation__form_wrapper ol li {
+  display: inline-block;
+  margin-right: 27px;
+  font-size: 18px;
+  max-width: 20%;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.registration__form__wrapper .navigation__form_wrapper ol li a {
+  color: #002d40;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.registration__form__wrapper .navigation__form_wrapper ol li a.done {
+  opacity: 1;
+}
+
+.registration__form__wrapper .sign-form {
+  width: 800px;
+  text-align: left;
+  margin: 85px 0 0 0;
+}
+
+.registration__form__wrapper .sign-form #next-page {
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  background: url("https://jdniki.github.io/signup/images/next-pagehover.svg");
+  background-size: contain;
+}
+
+.registration__form__wrapper .sign-form #next-page:hover {
+  background-size: contain;
+}
+
+.registration__form__wrapper .sign-form .questions {
+  list-style: none;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
+  width: 88%;
+  display: inline-block;
+  height: 80px;
+}
+
+.registration__form__wrapper .sign-form .questions li {
+  position: absolute;
+  width: 700px;
+  color: #002d40;
+  /*-------------Password ------------------*/
+}
+
+.registration__form__wrapper .sign-form .questions li a {
+  color: #002d40 !important;
+}
+
+.registration__form__wrapper .sign-form .questions li span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: "MonsterBold";
+  color: #002d40;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.registration__form__wrapper .sign-form .questions li input {
+  width: 100%;
+  font-size: 24px;
+  color: #002d40;
+  margin: 0.3em 0 1em 0;
+  border: none;
+  background: none;
+  border-bottom: 3px solid #bfd8db;
+  padding: 0.5em 0.1em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.registration__form__wrapper .sign-form .questions li input:focus {
+  outline: none;
+  border-bottom: 3px solid #bfd8db;
+}
+
+.registration__form__wrapper .sign-form .questions li:not(:first-child) {
+  opacity: 0;
+  margin-top: 150px;
+}
+
+.registration__form__wrapper .sign-form .questions li #viewpswd {
+  position: absolute;
+  opacity: 0;
+}
+
+.registration__form__wrapper .sign-form .questions li #show-pwd {
+  margin: -2.75em 0em;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  color: #002d40;
+  cursor: pointer;
+}
+
+.registration__form__wrapper .sign-form .questions li #show-pwd.view {
+  background: url("../img/hide.svg");
+  color: red;
+  background-size: contain;
+}
+
+.registration__form__wrapper .sign-form .questions li #show-pwd.hide {
+  background: url("https://jdniki.github.io/signup/images/hide.svg");
+  background-size: contain;
+  color: red;
+}
+
+.registration__form__wrapper .sign-form .questions li #show-pwd:active,
+.registration__form__wrapper .sign-form .questions li #show-pwd:focus {
+  background: url("https://jdniki.github.io/signup/images/hide.svg");
+  background-size: contain;
+}
+
+.registration__form__wrapper .sign-form .questions li select.country {
+  position: absolute;
+  width: 4.5em;
+  font-size: 0.7em;
+  color: #0c2e40;
+  height: 70px;
+  background: transparent;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+.registration__form__wrapper .sign-form .questions li #phone {
+  padding-left: 5em;
+}
+
+.registration__form__wrapper .error-message {
+  color: rgba(207, 0, 0, 0.56);
+  font-size: 14px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  background: #eefdff;
+}
+
+#wf {
+  color: #002d40;
+  font-size: 40px;
+}
+
+@-webkit-keyframes moveUpFromDown {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes moveUpFromDown {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+h2.title-text {
+  font-size: 26px;
+  min-height: 40px;
+  line-height: 40px;
+}
+
 .header {
   -webkit-box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
@@ -6105,13 +6334,25 @@ select.modal-edit__select-post {
   text-decoration: none;
 }
 
+.forum-menu span.pull-right {
+  display: none;
+}
+
 /*FORUM MENU*/
 .forum-menu .menu .menu-nav .menu-nav__title {
   text-align: center;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.border__bottom {
   border-bottom: solid 1px #ccc;
   padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+
+#media__search__btn {
+  cursor: pointer;
 }
 
 .forum-menu .section-form__btn {
@@ -6293,6 +6534,7 @@ select.modal-edit__select-post {
   background: #00e8ff;
   position: absolute;
   padding: 10px 63px;
+  font-family: "MonsterRegular";
   -webkit-transform: rotate(35deg);
       -ms-transform: rotate(35deg);
           transform: rotate(35deg);
@@ -6445,7 +6687,7 @@ select.modal-edit__select-post {
 }
 
 .offer-block .block-title {
-  padding: 40px 33px;
+  padding: 40px 10px;
   font-family: "MonsterBold";
   background-color: #ccc;
   color: #fff;
@@ -6455,7 +6697,7 @@ select.modal-edit__select-post {
 
 .offer-block .wrapper-element {
   background-color: #eefdff;
-  padding: 18px 30px;
+  padding: 18px 20px;
   font-weight: bold;
   overflow: hidden;
 }
@@ -6498,7 +6740,7 @@ select.modal-edit__select-post {
 
 .offer-block .block-head .block-actions {
   margin-top: 35px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .offer-block .block-head .block-actions span {
@@ -6756,6 +6998,25 @@ select.modal-edit__select-post {
 
 .wrapper-newsfeed-b .item-content .right-content {
   float: right;
+  margin-left: 15px;
+  margin-right: 100px;
+  padding: 20px 0;
+}
+
+html {
+  background-color: #f7f7f7;
+}
+
+.no__margin {
+  margin: 0px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.section-blog .item-content .right-content * {
+  line-height: 18px;
 }
 
 /*LANDING HEADER*/
